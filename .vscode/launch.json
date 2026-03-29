@@ -5,38 +5,38 @@
     "version": "0.2.0",
     "configurations": [
 
+        {
+            "name": "Dart & Flutter",
+            "request": "launch",
+            "type": "dart",
+            "program": "question1.dart"
+        },
         // {
         //     "name": "Dart & Flutter",
         //     "request": "launch",
         //     "type": "dart",
-        //     "program": "qone.dart"
-        // },
-        // {
-        //     "name": "Dart & Flutter",
-        //     "request": "launch",
-        //     "type": "dart",
-        //     "program": "qtwo.dart"
-        // },
-
-        // {
-        //     "name": "Dart & Flutter",
-        //     "request": "launch",
-        //     "type": "dart",
-        //     "program": "qthree.dart"
+        //     "program": "question2.dart"
         // },
 
         // {
         //     "name": "Dart & Flutter",
         //     "request": "launch",
         //     "type": "dart",
-        //     "program": "qfour.dart"
+        //     "program": "question3.dart"
         // },
 
         // {
         //     "name": "Dart & Flutter",
         //     "request": "launch",
         //     "type": "dart",
-        //     "program": "qfive.dart"
+        //     "program": "question4.dart"
+        // },
+
+        // {
+        //     "name": "Dart & Flutter",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "program": "question5.dart"
         // }
     ]
 }
