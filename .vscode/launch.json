@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        // {
+        //     "name": "Dart & Flutter",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "program": "qone.dart"
+        // },
+        // {
+        //     "name": "Dart & Flutter",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "program": "qtwo.dart"
+        // },
+
+        // {
+        //     "name": "Dart & Flutter",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "program": "qthree.dart"
+        // },
+
+        // {
+        //     "name": "Dart & Flutter",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "program": "qfour.dart"
+        // },
+
+        // {
+        //     "name": "Dart & Flutter",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "program": "qfive.dart"
+        // }
+    ]
+}
