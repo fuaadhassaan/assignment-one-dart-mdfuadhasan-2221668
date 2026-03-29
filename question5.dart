@@ -157,5 +157,4 @@ void main() {
   print("Calculate Salary: $developerSalary");
   developer.processPayment(developerSalary);
 }
-
 //END
