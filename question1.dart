@@ -38,8 +38,7 @@ String getGrade(int score) {
   } if (score >= 60) {
     return "D"; 
   } else {
-    return "F";  
-  return "";
+    return "F";
   }
 }
 
@@ -53,6 +52,6 @@ void main() {
 
   // TODO: Use string interpolation to display the results as shown in expected output
   print("Name: $name, Age: $age, Height: $height, Is Student: $isStudent");
-  print("BMI: $bmi.toStringAsFixed(1)}");
+  print("BMI: ${bmi.toStringAsFixed(1)}");
   print("Grade: $grade");
 }
