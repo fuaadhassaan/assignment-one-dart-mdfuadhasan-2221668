@@ -1,4 +1,4 @@
-# This file configures the static analysis results for your project (errors,
+# This file configures the static analysis results for project (errors,
 # warnings, and lints).
 #
 # This enables the 'recommended' set of lints from `package:lints`.
@@ -28,3 +28,4 @@ include: package:lints/recommended.yaml
 
 # For additional information about configuring this file, see
 # https://dart.dev/guides/language/analysis-options
+//END
