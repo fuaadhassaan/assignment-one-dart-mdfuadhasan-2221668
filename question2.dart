@@ -11,6 +11,59 @@
 
 import 'dart:math';
 
+Map<String, int> assignStudentScores(List<String> studentNames, {Random? random}) {
+  final rng = random ?? Random();
+  final studentScores = <String, int>{};
+  for (final student in studentNames) {
+    studentScores[student] = 60 + rng.nextInt(41);
+  }
+  return studentScores;
+}
+
+MapEntry<String, int> findHighestScore(Map<String, int> studentScores) {
+  var highestStudent = '';
+  var highestScore = -1;
+  studentScores.forEach((student, score) {
+    if (score > highestScore) {
+      highestScore = score;
+      highestStudent = student;
+    }
+  });
+  return MapEntry(highestStudent, highestScore);
+}
+
+MapEntry<String, int> findLowestScore(Map<String, int> studentScores) {
+  var lowestStudent = '';
+  var lowestScore = 1000;
+  studentScores.forEach((student, score) {
+    if (score < lowestScore) {
+      lowestScore = score;
+      lowestStudent = student;
+    }
+  });
+  return MapEntry(lowestStudent, lowestScore);
+}
+
+double calculateAverageScore(Map<String, int> studentScores) {
+  if (studentScores.isEmpty) return 0;
+  final total = studentScores.values.reduce((a, b) => a + b);
+  return total / studentScores.length;
+}
+
+String categorizeScore(int score) {
+  switch (score ~/ 10) {
+    case 10:
+    case 9:
+      return 'Excellent';
+    case 8:
+      return 'Good';
+    case 7:
+      return 'Average';
+    default:
+      return 'Needs Improvement';
+  }
+}
+
 void main() {
   // 1. Create a List<String> of student names: ["Alice", "Bob", "Charlie", "Diana", "Eve"]
   // TODO: Create the student names list
