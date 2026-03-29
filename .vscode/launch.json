@@ -5,12 +5,12 @@
     "version": "0.2.0",
     "configurations": [
 
-        {
-            "name": "Dart & Flutter",
-            "request": "launch",
-            "type": "dart",
-            "program": "question1.dart"
-        },
+        // {
+        //     "name": "Dart & Flutter",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "program": "question1.dart"
+        // },
         // {
         //     "name": "Dart & Flutter",
         //     "request": "launch",

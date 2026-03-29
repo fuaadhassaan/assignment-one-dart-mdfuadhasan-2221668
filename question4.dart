@@ -32,13 +32,13 @@ abstract class Vehicle {
   // Concrete method
   void displayInfo() {
     // TODO: Display vehicle information
-    print ("Vehicle Info: $year $brand $model");
+    print("Vehicle Info: $year $brand $model");
   }
 
   // Add a method to calculate vehicle age (current year - vehicle year)
   int calculateAge() {
     // TODO: Calculate and return vehicle age
-    return DateTime.now().year- year;
+    return DateTime.now().year - year;
   }
 }
 
@@ -50,7 +50,7 @@ class Car extends Vehicle {
   int numberOfDoors;
 
   Car(String brand, String model, int year, this.numberOfDoors)
-      : super(brand, model, year);
+    : super(brand, model, year);
 
   @override
   void start() {
@@ -78,7 +78,7 @@ class Motorcycle extends Vehicle {
   bool hasWindshield;
 
   Motorcycle(String brand, String model, int year, this.hasWindshield)
-      : super(brand, model, year);
+    : super(brand, model, year);
 
   @override
   void start() {
@@ -102,9 +102,9 @@ class Motorcycle extends Vehicle {
 void main() {
   // 3. Create a list of vehicles and demonstrate polymorphism by calling start(), stop(), and displayInfo() on each vehicle
   // TODO: Create a list containing one Car and one Motorcycle
-  List <Vehicle> vehicles= [
+  List<Vehicle> vehicles = [
     Car("Toyota", "Camry", 2020, 4),
-    Motorcycle("Honda", "CBR", 2021, true)
+    Motorcycle("Honda", "CBR", 2021, true),
   ];
 
   // TODO: Loop through the list and call displayInfo(), start(), and stop()

@@ -17,7 +17,7 @@ bool isStudent = true;
 // TODO: Implement the calculateBMI function
 double calculateBMI(double weight, double height) {
   // TODO: Calculate BMI = weight / (height * height)
-  return weight/(height*height);
+  return weight / (height * height);
 }
 
 // 3. Write a function called getGrade that takes a score (int) and returns a grade (String) based on:
@@ -31,12 +31,15 @@ String getGrade(int score) {
   // TODO: Add your logic here
   if (score >= 90) {
     return "A";
-  } if (score >= 80) {
+  }
+  if (score >= 80) {
     return "B";
-  } if (score >= 70) {
+  }
+  if (score >= 70) {
     return "C";
-  } if (score >= 60) {
-    return "D"; 
+  }
+  if (score >= 60) {
+    return "D";
   } else {
     return "F";
   }
@@ -44,8 +47,8 @@ String getGrade(int score) {
 
 void main() {
   // TODO: Initialize your variables with appropriate values
-  double weight= 22.5*(height*height);
-  
+  double weight = 22.5 * (height * height);
+
   // TODO: Calculate BMI and grade
   double bmi = calculateBMI(weight, height);
   String grade = getGrade(85);

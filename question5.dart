@@ -66,7 +66,7 @@ class Manager extends Employee with Payable, Reportable {
   int teamSize;
 
   Manager(String name, String id, String department, this.teamSize)
-      : super(name, id, department);
+    : super(name, id, department);
 
   @override
   String getJobTitle() {
@@ -83,7 +83,9 @@ class Manager extends Employee with Payable, Reportable {
   @override
   void displayInfo() {
     // TODO: Override to show manager-specific info as shown in expected output
-    print("Manager: $name (ID: $id, Department: $department, Team Size: $teamSize)");
+    print(
+      "Manager: $name (ID: $id, Department: $department, Team Size: $teamSize)",
+    );
     print("Job Title: ${getJobTitle()}");
     print("Base Salary: ${getBaseSalary()}");
   }
@@ -96,7 +98,7 @@ class Developer extends Employee with Payable {
   String programmingLanguage;
 
   Developer(String name, String id, String department, this.programmingLanguage)
-      : super(name, id, department);
+    : super(name, id, department);
 
   @override
   String getJobTitle() {
@@ -113,7 +115,9 @@ class Developer extends Employee with Payable {
   @override
   void displayInfo() {
     // TODO: Override to show developer-specific info as shown in expected output
-    print("Developer: $name (ID: $id, Department: $department, Language: $programmingLanguage)");
+    print(
+      "Developer: $name (ID: $id, Department: $department, Language: $programmingLanguage)",
+    );
     print("Job Title: ${getJobTitle()}");
     print("Base Salary: ${getBaseSalary()}");
   }
@@ -133,18 +137,25 @@ void main() {
   // TODO: Generate and print report for the Manager
 
   // TODO: Display information for both employees
-  Manager manager= Manager("John Smith", "M001", "IT", 5);
+  Manager manager = Manager("John Smith", "M001", "IT", 5);
   manager.displayInfo();
-  double managerSalary= manager.calculateSalary(manager.getBaseSalary(), 1000.0);
+  double managerSalary = manager.calculateSalary(
+    manager.getBaseSalary(),
+    1000.0,
+  );
   print("Calculate Salary: $managerSalary");
   manager.processPayment(managerSalary);
   print(manager.generateReport(manager.name, manager.department));
   print("");
 
-  Developer developer= Developer("Alice Johnson", "D001", "IT", "Dart");
+  Developer developer = Developer("Alice Johnson", "D001", "IT", "Dart");
   developer.displayInfo();
-  double developerSalary= developer.calculateSalary(developer.getBaseSalary(), 500.0);
+  double developerSalary = developer.calculateSalary(
+    developer.getBaseSalary(),
+    500.0,
+  );
   print("Calculate Salary: $developerSalary");
   developer.processPayment(developerSalary);
 }
+
 //END

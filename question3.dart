@@ -20,14 +20,14 @@ class BankAccount {
   //    - Set initial balance to 0.0
   // TODO: Implement the constructor
   BankAccount(this.accountNumber, this.accountHolder, this.accountType)
-      : balance = 0.0;
+    : balance = 0.0;
 
   // 3. Methods:
   //    - deposit(double amount): Add money to account
   // TODO: Implement the deposit method
   void deposit(double amount) {
     // TODO: Add the amount to balance
-    if (amount> 0) {
+    if (amount > 0) {
       balance += amount;
     }
   }
@@ -38,10 +38,12 @@ class BankAccount {
     // TODO: Check for sufficient funds and subtract amount
     // TODO: Print error message if insufficient funds
     // Expected error format: "Insufficient funds for withdrawal of <amount> from account <accountNumber>"
-    if (amount> 0 && amount <= balance) {
+    if (amount > 0 && amount <= balance) {
       balance -= amount;
     } else {
-      print ("Insufficient funds for withdrawal of $amount from account $accountNumber");
+      print(
+        "Insufficient funds for withdrawal of $amount from account $accountNumber",
+      );
     }
   }
 
@@ -57,7 +59,9 @@ class BankAccount {
   void displayAccountInfo() {
     // TODO: Display account information
     // Expected format: "Account: <number>, Holder: <name>, Type: <type>, Balance: <balance>"
-    print("Account: $accountNumber, Holder: $accountHolder, Type: $accountType, Balance: $balance");
+    print(
+      "Account: $accountNumber, Holder: $accountHolder, Type: $accountType, Balance: $balance",
+    );
   }
 }
 
@@ -72,10 +76,9 @@ void main() {
   // 1. Account: 12345, Holder: Alice, Type: Savings
   // 2. Account: 67890, Holder: Bob, Type: Checking
   // 3. Account: 11111, Holder: Charlie, Type: Savings
-  BankAccount acc1= BankAccount ("12345", "Alice", "Savings");
-  BankAccount acc2= BankAccount ("67890", "Bob", "Checking");
-  BankAccount acc3= BankAccount ("11111", "Charlie", "Savings");
-
+  BankAccount acc1 = BankAccount("12345", "Alice", "Savings");
+  BankAccount acc2 = BankAccount("67890", "Bob", "Checking");
+  BankAccount acc3 = BankAccount("11111", "Charlie", "Savings");
 
   // TODO: Demonstrate depositing money:
   // Account 1: 1000.0, Account 2: 500.0, Account 3: 2000.0
@@ -87,7 +90,6 @@ void main() {
   // Account 1: 200.0, Account 2: 100.0
   acc1.withdraw(200.0);
   acc2.withdraw(100.0);
-  acc3.withdraw(100.0);
 
   // TODO: Display account information for all accounts
   acc1.displayAccountInfo();

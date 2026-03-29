@@ -11,7 +11,10 @@
 
 import 'dart:math';
 
-Map<String, int> assignStudentScores(List<String> studentNames, {Random? random}) {
+Map<String, int> assignStudentScores(
+  List<String> studentNames, {
+  Random? random,
+}) {
   final rng = random ?? Random();
   final studentScores = <String, int>{};
   for (final student in studentNames) {
@@ -75,9 +78,9 @@ void main() {
 
   // 3. Use a for loop to assign random scores (60-100) to each student
   // TODO: Implement the for loop to assign random scores
-  Random random= Random();
+  Random random = Random();
   for (String student in studentNames) {
-    studentScores[student]= 60+ random.nextInt(41);
+    studentScores[student] = 60 + random.nextInt(41);
   }
 
   // 4. Find and display:
@@ -93,20 +96,20 @@ void main() {
 
   // TODO: Add your logic here
 
-studentScores.forEach((student, score) {
-    if (score > highestScore){
-      highestScore= score;
-      highestStudent= student;
+  studentScores.forEach((student, score) {
+    if (score > highestScore) {
+      highestScore = score;
+      highestStudent = student;
     }
 
-    if (score > lowestScore){
-      lowestScore= score;
-      lowestStudent= student;
+    if (score > lowestScore) {
+      lowestScore = score;
+      lowestStudent = student;
     }
-    total+= score;
+    total += score;
   });
 
-  double averageScore= total/ studentScores.length;
+  double averageScore = total / studentScores.length;
 
   print("Student Scores: $studentScores");
   print("Highest Score: $highestStudent with $highestScore");
@@ -124,19 +127,19 @@ studentScores.forEach((student, score) {
     String category = "";
 
     // TODO: Add your switch statement here
-    switch (score ~/10) {
+    switch (score ~/ 10) {
       case 10:
       case 9:
-        category= "Excellent";
+        category = "Excellent";
         break;
       case 8:
-        category= "Good";
+        category = "Good";
         break;
       case 7:
-        category= "Average";
+        category = "Average";
         break;
       default:
-        category= "Needs Improvement";
+        category = "Needs Improvement";
     }
 
     print("$student: $score ($category)");
